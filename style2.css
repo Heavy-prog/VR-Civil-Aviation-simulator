@@ -1,0 +1,158 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #cc0000;
+    color: #fff;
+    padding: 10px 0; /* Reduced padding to decrease header height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.simulator-name {
+    display: flex;
+    align-items: center;
+}
+
+.simulator-logo {
+    max-width: 120px; /* Reduced size of the logo */
+    height: auto;
+}
+
+/* Centering Performance Analytics Text */
+.header-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header-center h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Performance overview */
+.overview {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.metric {
+    text-align: center;
+    margin: 10px;
+}
+
+.metric h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.metric p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Chart section */
+.charts {
+    margin-top: 40px;
+}
+
+.chart-container {
+    margin-bottom: 40px;
+}
+
+canvas {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filter dropdown */
+.filter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.filter select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 200px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
