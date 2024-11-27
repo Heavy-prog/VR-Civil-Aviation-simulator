@@ -1,3 +1,18 @@
+"""
+This is a user interface using Kivy application that demonstrates a basic Admin authentication and management system. 
+
+The app consists of two main screens:
+1. **SignInScreen**: A login interface for the administrator.
+2. **AdminDashboardScreen**: A dashboard for the admin to manage users and perform various operations.
+
+Features include:
+- Admin login functionality with username and password validation.
+- Ability to change the admin's password.
+- User management capabilities (add, view, and delete users).
+- A scrollable view to display a list of all users and their details.
+
+The app uses simulated user data (`USER_DATA`) for demonstration purposes. Passwords and other data are stored in memory and are not persistent.
+"""
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.popup import Popup
