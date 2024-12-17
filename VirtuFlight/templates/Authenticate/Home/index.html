@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtuFlight - Civil Aviation VR Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Authenticate/Home/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='Authenticate/Home/logo.png') }}" alt="VirtuFlight Logo">
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#home" onclick="smoothScroll('#home')">Home</a></li>
+                <li><a href="{{ url_for('flight_conditions') }}" nclick="smoothScroll('#training')">Flight Conditions</a></li>
+                <li><a href="#contact" onclick="smoothScroll('#contact')">Emergency Simulation</a></li>
+                <li><a href="#features" onclick="smoothScroll('#features')">Avionics Training</a></li>
+                <li><a href="#features" onclick="smoothScroll('#features')">Air Traffic control(ATC) Training</a></li>
+                <li><a href="#features" onclick="smoothScroll('#features')">Training History</a></li>
+                <li><a href="{{ url_for('performance_analytics') }}" onclick="smoothScroll('#features')">Performance Analytics</a></li>
+            </ul>
+            
+        </nav>
+        <div class="user-profile">
+            <img src="{{ url_for('static', filename='Authenticate/Home/profile.png') }}" alt="Profile Icon" class="profile-icon">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Background Image -->
+        <section id="home">
+            <div class="hero">
+                <h1>VirtuFlight: The Future of Aviation Training</h1>
+                <p>Step into a world of immersive flight simulation and perfect your piloting skills from the comfort of your home.</p>
+                <button id="start-button">Start Simulator</button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="feature-box">
+                <div class="feature-item">
+                    <h3>Realistic Flight Scenarios</h3>
+                    <p>Experience a wide variety of weather, terrain, and emergency situations.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Interactive Pilot Training</h3>
+                    <p>Get personalized feedback and coaching to improve your flight skills.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Multiple Aircraft Models</h3>
+                    <p>Choose from a range of aircraft types to train on, from single-engine planes to commercial jets.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Real-Time Weather Simulation</h3>
+                    <p>Fly in realistic conditions, from clear skies to thunderstorms, and adapt to changing environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Section -->
+        <section id="training">
+            <h2>Our Training Programs</h2>
+            <p>We offer training for pilots at all levels, from beginners to professionals.</p>
+            <button class="cta-btn">Learn More</button>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to learn more? Get in touch with us!</p>
+            <p>Email us: <a href="mailto:info@virtuFlight.com">info@virtuFlight.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VirtuFlight | All Rights Reserved</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='Authenticate/Home/script.js') }}"></script>
+</body>
+</html>
