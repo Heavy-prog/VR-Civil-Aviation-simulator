@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Conditions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Flight Conditions/style.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="flight-conditions">
+            {% for condition in conditions %}
+            <div class="condition">
+                <img src="{{ condition.image_path }}" alt="{{ condition.name }}" />
+                <h3>{{ condition.name }}</h3>
+                <p>{{ condition.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="logo">
+            <img src="{{ url_for('static', filename='Flight Conditions/logo.png') }}" alt="VirtuFlight Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home" onclick="smoothScroll('#home')">Home</a></li>
+                <li><a href="/flight-condition" nclick="smoothScroll('#training')">Flight Conditions</a></li>
+                <li><a href="#contact" onclick="smoothScroll('#contact')">Emergency Simulation</a></li>
+                <li><a href="#features" onclick="smoothScroll('#features')">Avionics Training</a></li>
+                <li><a href="#features" onclick="smoothScroll('#features')">Air Traffic control(ATC) Training</a></li>
+                <li><a href="#features" onclick="smoothScroll('#features')">Training History</a></li>
+                <li><a href="/performance-analytics" onclick="smoothScroll('#features')">Performance Analytics</a></li>
+            </ul>
+            
+        </nav>
+        <div class="user-profile">
+            <img src="{{ url_for('static', filename='Flight Conditions/profile.png') }}" alt="Profile Icon" class="profile-icon">
+            <span>Edit Profile</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="flight-conditions">
+            <!-- Terrain Selection at Top -->
+            <div class="terrains">
+                <h2>Flight Conditions</h2>
+                <h3>Terrains</h3>
+                <div class="terrain-options">
+                    <div class="terrain" data-terrain="Mountainous">
+                        <img src="/static/Flight Conditions/Mountain.png" alt="Mountainous Terrain">
+                        <p>Mountainous</p>
+                    </div>
+                    <div class="terrain" data-terrain="Coastal">
+                        <img src="/static/Flight Conditions/coastal.png" alt="Coastal Terrain">
+                        <p>Coastal</p>
+                    </div>
+                    <div class="terrain" data-terrain="Forest">
+                        <img src="/static/Flight Conditions/Forest.png" alt="Forest Terrain">
+                        <p>Forest</p>
+                    </div>
+                    <div class="terrain" data-terrain="Desert">
+                        <img src="/static/Flight Conditions/Desert.png" alt="Desert Terrain">
+                        <p>Desert</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environmental and Aerodynamics Factors Side by Side -->
+            <div class="conditions-factors">
+                <div class="environmental-factors">
+                    <h3>Environmental Factors</h3>
+                    <div class="slider-group">
+                        <label>Wind Speed (Knots): <span class="value">35</span></label>
+                        <input type="range" min="0" max="100" value="35">
+                    </div>
+                    <div class="slider-group">
+                        <label>Visibility (Km): <span class="value">15</span></label>
+                        <input type="range" min="0" max="50" value="15">
+                    </div>
+                    <div class="slider-group">
+                        <label>Temperature (Celsius): <span class="value">69</span></label>
+                        <input type="range" min="-50" max="100" value="69">
+                    </div>
+                    <div class="slider-group">
+                        <label>Precipitation (mm/hour): <span class="value">5</span></label>
+                        <input type="range" min="0" max="100" value="5">
+                    </div>
+                    <div class="slider-group">
+                        <label>Turbulence (m/s): <span class="value">53</span></label>
+                        <input type="range" min="0" max="100" value="53">
+                    </div>
+                </div>
+
+                <div class="aerodynamics-factors">
+                    <h3>Aerodynamics Factors</h3>
+                    <div class="slider-group">
+                        <label>Sea Level Pressure (hPA): <span class="value">53</span></label>
+                        <input type="range" min="0" max="100" value="53">
+                    </div>
+                    <div class="slider-group">
+                        <label>Cruising Altitude (feet): <span class="value">20000</span></label>
+                        <input type="range" min="0" max="50000" value="20000">
+                    </div>
+                    <div class="slider-group">
+                        <label>Lift (lbs): <span class="value">160000</span></label>
+                        <input type="range" min="0" max="200000" value="160000">
+                    </div>
+                    <div class="slider-group">
+                        <label>Drag (lbs): <span class="value">130000</span></label>
+                        <input type="range" min="0" max="200000" value="130000">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Simulation Button -->
+        <div class="start-simulation">
+            <button id="start-btn">Start Simulation</button>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='Flight Conditions/script.js') }}"></script>
+</body>
+</html>
