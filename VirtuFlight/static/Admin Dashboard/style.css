@@ -1,0 +1,146 @@
+/* Reset basic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar Styles - Adjusted to move logo right and center the name */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e60000; /* Red color */
+    padding: 20px 0;
+    position: relative;
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 20px; /* Shifts logo a bit to the right */
+}
+
+.navbar-logo img {
+    height: 100px;
+}
+
+.navbar-name h1 {
+    margin: 0;
+    font-size: 36px;
+    color: white;
+    font-weight: 500;
+}
+
+.virtulogo {
+    color: rgb(255, 255, 255);
+}
+
+.flightlogo {
+    color: rgb(255, 255, 255);
+}
+
+/* Dashboard Styles */
+.dashboard {
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard h1 {
+    font-size: 36px;
+    color: #e60000; /* Red color for header */
+    margin-bottom: 30px;
+}
+
+.dashboard-buttons {
+    display: flex;
+    flex-direction: column; /* Makes the buttons stack vertically */
+    gap: 15px; /* Adds spacing between buttons */
+    align-items: center; /* Centers the buttons horizontally */
+    margin-top: 20px;
+}
+
+.dashboard-buttons button {
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.dashboard-buttons button:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.dashboard-buttons button:active {
+    transform: scale(1);
+}
+
+/* Popup Styles */
+.popup {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup h2 {
+    color: #e60000;
+    margin-bottom: 20px;
+}
+
+.popup .popup-content {
+    margin-bottom: 20px;
+}
+
+.popup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.popup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup button {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    background-color: rgb(109, 22, 22);
+}
+
+.popup .close-popup {
+    background-color: #ccc;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.popup .close-popup:hover {
+    background-color: darkgray;
+}
