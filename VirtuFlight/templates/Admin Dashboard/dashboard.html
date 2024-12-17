@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Dashboard</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='Admin Dashboard/style.css') }}"
+        />
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        <button data-id="{{ user.id }}" class="delete-user">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <header class="navbar">
+            <div class="navbar-logo">
+                <img
+                    src="{{ url_for('static', filename='Admin Dashboard/logo.png') }}"
+                    alt="VirtuFlight Logo"
+                    class="logo"
+                />
+            </div>
+            <div class="navbar-name">
+                <h1>
+                    <span class="virtulogo">Virtu</span
+                    ><span class="flightlogo">Flight</span>
+                </h1>
+            </div>
+        </header>
+        <main class="dashboard">
+            <h1>Admin Dashboard</h1>
+            <div class="dashboard-buttons">
+                <button
+                    id="change-password"
+                    onclick="handleButtonClick('Change Password')"
+                >
+                    Change Password
+                </button>
+                <button id="add-user" onclick="handleButtonClick('Add User')">
+                    Add User
+                </button>
+                <button
+                    id="delete-user"
+                    onclick="handleButtonClick('Delete User')"
+                >
+                    Delete User
+                </button>
+                <button
+                    id="view-users"
+                    onclick="handleButtonClick('View Users')"
+                >
+                    View Users
+                </button>
+                <button id="log-out" onclick="handleButtonClick('Log Out')">
+                    Log Out
+                </button>
+            </div>
+        </main>
+
+        <!-- Popup container -->
+        <div id="popup-container"></div>
+
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+</html>
